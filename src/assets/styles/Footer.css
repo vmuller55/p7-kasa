@@ -7,15 +7,34 @@
     flex-wrap: wrap;
     color: #fff;
     align-items: center;
-    margin: 10rem 0 0 0;
+    height: 209px;
+    margin-top: 201px;
   }
   .footer__logo {
-    padding: 2rem 0 0 0;
+    height: 1px;
   }
   .footer__logo .logo {
-    max-width: 122px;
+   max-width: 122px;
+   margin-top: 66px;
+   margin-bottom: 29px;
   }
   .footer__mentions {
-    padding: 0.5rem 0 2rem 0;
-    font-size: 0.8rem;
+    margin-top: 133px;
+    margin-bottom: 29px;
+    max-width: 513px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    
+  }
+
+  @media (min-width:300px) and (max-width: 768px) {
+    .footer {
+      margin-top: 168px;
+    }
+    .footer__mentions {
+      font-size: 12px;
+    }   
   }
