@@ -1,0 +1,15 @@
+.about__dropdowns {
+    margin: 30px auto;
+    width: 70%;
+    color: #FF6060;
+  }
+  @media (max-width: 992px) {
+    .about__dropdowns {
+      width: 65%;
+    }
+  }
+  @media (max-width: 768px) {
+    .about__dropdowns {
+      width: calc(100% - 40px);
+    }
+  }

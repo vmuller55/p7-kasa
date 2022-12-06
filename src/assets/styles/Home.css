@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    row-gap: 50px;
+    margin: 43px 100px;
+    padding: 56px 50px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .main {
+      margin: 20px 20px;
+      background-color: white;
+      padding: 0px;
+      gap: 25px;
+    }
+  }
+  .main__link {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    .main__link {
+      width: 100%;
+    }
+}
