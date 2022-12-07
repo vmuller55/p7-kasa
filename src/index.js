@@ -7,7 +7,8 @@ import Home from './pages/Home/Home';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import About from './pages/About/About.jsx'
-import Error404 from './pages/Error404/Error404.jsx'
+import Error404 from './pages/Error404/Error404.jsx';
+import Appartment from './pages/Appartement/Appartment.jsx';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
       <Routes>
         <Route index element={<Home />} />
         <Route path="about" element={<About />}/>
+        <Route path="apartment/:productId" element={<Appartment />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

@@ -34,13 +34,16 @@
   }
   @media (max-width: 768px) {
     .wrapper-banner {
-      height: 223px;
+      height: 110px;
+      
+      margin: 20px;
+      
     }
     .wrapper-banner img{
-      height: 223px;
+      height: 110px;
     }
     .wrapper-banner__background {
-      background-color: white;
+      height: 110px;
     }
     .wrapper-banner__title {
       font-size: 24px;

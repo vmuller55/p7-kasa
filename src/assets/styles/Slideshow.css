@@ -1,0 +1,55 @@
+.slideshow {
+    position: relative;
+  }
+  .slideshow__active-picture {
+    height: 415px;
+    width: 100%;
+  }
+  .slideshow__picture {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .slideshow__previous, .slideshow__next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  .slideshow__next {
+    right: 0;
+  }
+  .slideshow__next-icon {
+    margin-right: 23px;
+  }
+  .slideshow__previous-icon {
+    margin-left: 23px;
+  }
+  .slideshow__next-icon, .slideshow__previous-icon {
+    height: 79px;
+    /*Ajout d'une ombre pour rendre les flèches plus visibles*/
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  }
+  @media (max-width: 768px) {
+    .slideshow__picture {
+      border-radius: 10px;
+      height: 255px;
+      margin: 20px;
+      margin: auto;
+      
+    }
+    .slideshow__next-icon {
+      margin-right: 5.8px;
+    }
+    .slideshow__previous-icon {
+      margin-left: 5.8px;
+    }
+    .slideshow__active-picture {
+      height: auto;
+      width: 100%;
+    }
+    .slideshow__next-icon, .slideshow__previous-icon {
+      height: 20px;
+    }
+  }

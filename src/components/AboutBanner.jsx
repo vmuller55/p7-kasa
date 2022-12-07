@@ -3,13 +3,13 @@ import "../assets/styles/AboutBanner.css";
 // En paramètre on met la prop qu'on utilise dans la fct et qui est utilisée dans le parent "About"
 function AboutBanner({ picture }) {
   return (
-    <div className="wrapper-banner">
+    <div className="wrapper-aboutBanner">
       <img
-        className="wrapper-banner__img"
+        className="wrapper-aboutBanner__img"
         src={picture}
         alt="Paysage montagneux"
       />
-      <div className="wrapper-banner__background"></div>
+      <div className="wrapper-aboutBanner__background"></div>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.rating {
+    display: flex;
+    align-items: center;
+  }
+  .rating__icon {
+    margin-left: 5px;
+  }
+  @media (max-width: 768px) {
+    .rating__icon {
+      width: 15px;
+      height: auto;
+      
+    }
+  }

@@ -1,0 +1,35 @@
+.host {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+  }
+  .host__name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .host__name p {
+    margin: 0;
+    text-align: end;
+  }
+  .host__picture {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+  }
+
+  @media (max-width: 768px) {
+    .host__picture {
+      height: 32px;
+      width: 32px;
+    }
+    .host__name {
+      font-size: 12px;
+    }
+    .host {
+      margin-bottom: 0px;
+    }
+  }
