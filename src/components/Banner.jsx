@@ -1,6 +1,10 @@
 import "../assets/styles/Banner.css";
 
-// En paramètre on met les props qu'on utilise dans la fct et qui sont utilisés dans le parent "Home"
+/**
+ * Fonction qui met en place le code HTML correspondant à la Banner
+ * @param {any} param0 Prends en paramètre les props de l'élément parent Home 
+ * @returns 
+ */
 function Banner({ title, picture }) {
   return (
     <div className="wrapper-banner">

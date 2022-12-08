@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
 import "../assets/styles/Footer.css";
 import Logo from "./Logo";
-
+import { Link } from "react-router-dom";
+/**
+ * Fonction utilsant Link sur le Logo pour retourner à la page d'acceuil 
+ * @returns HTML relatif au footer
+ */
 function Footer() {
   return (
     <footer className="footer">
-      {/* Renvoie à l'accueil en cliquant dessus */}
       <Link className="footer__logo" to="/">
         <Logo fill="#ffffff" className="logo" />
       </Link>

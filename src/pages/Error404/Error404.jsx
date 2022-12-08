@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
 import "../../assets/styles/Error404.css";
+import { Link } from "react-router-dom";
 
+/**
+ * Fonction qui affiche la page d'érreur et met en place un lien vers la page Home
+ * @returns Le HTML relatif à la page d'érreur
+ */
 function Error404() {
   return (
     <div className="wrapper-error">

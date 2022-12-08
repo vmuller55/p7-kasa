@@ -1,21 +1,30 @@
-// Import du hook d'état "useState"
+import "../assets/styles/Collapse.css";
+import arrowdown from "../assets/images/dropdown-arrow-desktop.png";
+/**
+ * Importation de useState
+ */
 import { useState } from "react";
 
-import "../assets/styles/Collapse.css";
 
-import arrowdown from "../assets/images/dropdown-arrow-desktop.png";
-
+/**
+ * 
+ * @param {*} param0 Props de l'élément parent About
+ * @returns 
+ */
 function Collapse({ content, title }) {
-  // On initialise isOpen (la variable d'état) sur false. Et setIsOpen est la fonction callback qui permet d'actualiser l'état (true ou false dans ce cas présent)
+  /**
+   * Constante d'état isOpen initialisé en "false" / setIsOpen nous permet de vérifier l'état
+   */
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="collapse">
-      {/* className car class c'est pour JS */}
       <div
         className={`collapse__content ${
           !isOpen ? "collapse__content--margin" : ""
         }`}
-        // Au clique, on met l'inverse de l'état actuel d'isOpen grâce à la fct setIsOpen
+        /**
+         * Utilisation de setIsOpen pour changer l'état de isOpen en utilsant onClick
+         */
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="collapse__title">{title}</div>
@@ -27,7 +36,9 @@ function Collapse({ content, title }) {
           alt=""
         />
       </div>
-      {/* Ternaire (if, else) : si isOpen est "true" on applique la className "__text" sinon "__hide" */}
+      {/**
+       * Vérification si la variable isOpen est true et affiche le texte dans ce cas, sinon il est "caché"
+       */}
       <div className={isOpen ? "collapse__text" : "collapse__hide"}>
         {content}
       </div>

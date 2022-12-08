@@ -1,38 +1,43 @@
-// Import du style associé
 import "../../assets/styles/Home.css";
-
-// Import des composants essentiels
+import bannerImg from "../../assets/images/bannerImg.jpeg";
+/**
+ * Importation des composants de la page Home
+ */
 import Banner from "../../components/Banner";
 import AppartmentCard from "../../components/AppartmentCards";
-
-// Import des données
+/**
+ * Importation du fichier JSON contenant les informations des appartements
+ */
 import data from "../../assets/data/data.json";
-import bannerImg from "../../assets/images/bannerImg.jpeg";
-
-// Import de link via...
 import { Link } from "react-router-dom";
 
-// Composant fonction "Home" de la page Home. Parent des composants genérés dans le return
+/**
+ * Fonction permettant de générer les éléments HTML de la page Home
+ * @returns les cards des appartements dans un lien menant à leurs page respective
+ */
 function Home() {
   const bannerTitle = "Chez vous, partout et ailleurs";
   return (
     <div>
-      {/* Utilisation des props title et picture */}
+      {/**
+       * Mise en place de la banner, utilisation de title et de picture pour les passer en prop dans l'élément enfant
+       */}
       <Banner title={bannerTitle} picture={bannerImg} />
       <main className="main">
+         {/**
+          * .map nous permet de parcourir les éléments de notre fichier json 
+          */}
         {data.map((apartment) => {
-          /* return generera les liens de redirection des cartes */
           return (
             <Link
               className="main__link"
-              // Redirection vers le chemin ci-dessous avec la variable en paramètre (cme défini dans le routeur)
+              /**
+               * Redirection vers /apartment/id comme utilisé dans le routing
+               */
               to={`/apartment/${apartment.id}`}
-              // Pour identifier les elements d'une liste de manière unique
               key={apartment.id}
               title={apartment.title}
             >
-              {/* le spread operator pour récup toutes les données de chaque appartement mappé.
-              Dans le le composant ci-dessous on récupère seulement le "cover" et le "title" mais ça fait plus court */}
               <AppartmentCard {...apartment} />
             </Link>
           );
@@ -42,5 +47,4 @@ function Home() {
   );
 }
 
-// Export pour réutilisation dans le routeur
 export default Home;

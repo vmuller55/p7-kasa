@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+/**
+ * Importation de react-rooter pour mettre en place le routing de l'application web
+ */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import './assets/styles/normalize.css'
+/**
+ * Importation des diférentes pages appelés avec les routes
+ */
 import Home from './pages/Home/Home';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -11,6 +17,9 @@ import Error404 from './pages/Error404/Error404.jsx';
 import Appartment from './pages/Appartement/Appartment.jsx';
 import reportWebVitals from './reportWebVitals';
 
+/**
+ * Implémentation des routes dans le fichier HTML 
+ */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -19,7 +28,10 @@ root.render(
       <Routes>
         <Route index element={<Home />} />
         <Route path="about" element={<About />}/>
-        <Route path="apartment/:productId" element={<Appartment />} />
+        <Route path="apartment/:productId" exact strict element={<Appartment />} />
+        {/**
+         * Ici 'path"*"' nous permet de renvoyer les URL non définits à notre page d'érreur 
+         */}
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

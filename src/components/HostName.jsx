@@ -1,9 +1,17 @@
 import "../assets/styles/HostName.css";
-
+/**
+ * 
+ * @param {*} param0 Fonction qui prends en prop host de 'élement parent Apartment
+ * @returns Le HTML relatif au nom et prénom de l'hôte
+ */
 function HostName({ host }) {
-  // On split autour des espaces
+ /**
+  * Récupération du nom et du prénom de l'hote avec la méthode split
+  */
   const hostSplitName = host.name.split(" ");
-  // Dans l'array retourné "hostSplitName", il y a deux string : le premier sera le name et l'autre le lastname
+  /**
+   * Attribution de name et lastname
+   */
   const [name, lastname] = hostSplitName;
 
   return (

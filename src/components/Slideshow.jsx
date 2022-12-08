@@ -1,46 +1,47 @@
-// Import de useState. Le state local est présent à l’intérieur d’un composant
-// et garde sa valeur, même si l'application se re-render
-import { useState } from "react";
-
-// Import du style
 import "../assets/styles/Slideshow.css";
-
-// Import des flèches
 import arrowLeft from "../assets/images/arrowLeft.svg";
 import arrowRight from "../assets/images/arrowRight.svg";
+import { useState } from "react";
 
-// Composant fonction (enfant) "Slider" que l'on exporte dans le composant (parent) Apartment qui est une page à part entière
+/**
+ * Fonction qui met en place la gallerie d'image
+ * @param {*} param0 Prends en props les pictures passés dans l'ételement parent Appartment
+ * @returns 
+ */
 function Slideshow({ props }) {
-  // Création du state "current" qu'on initialise à 0 et déclaration de la fct qui met à jour ce state
+  
   const [current, updateCurrent] = useState(0);
-
-  // Création de la variable "longueur" qui calcul la longueur de "props"
-  // soit le nombre de "pictures" dans la page appartement
+  /**
+   * Stockage du nombre d'image dans une constante
+   */
   const length = props.length;
-
-  // Maj de current avec la fonction qui prend pour argument une ternaire
-  // Si current est à length (total) - 1 on le passe à 0 (1ere img) sinon on fait +1 (suivant)
+  /**
+   * Permet de mettre à jour la valeur state (current)
+   */
   const nextSlide = () => {
     updateCurrent(current === length - 1 ? 0 : current + 1);
   };
-
   const prevSlide = () => {
     updateCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  // Ce composant "render", retourne ce qui suit ?????????????????????????????
-  // Une div stylisé avec chaque photo mappée que l'on peut consulter grâce aux flèches
   return (
     <div className="slideshow">
+      {/**
+       * .map parcour les photos et créer les éléments HTML relatif pour chacune d'elle
+       */}
       {props.map((picture, index) => {
         return (
-          /* Pour chaque photo du tableau "pictures" on renvoit une div */
           <div
             key={index}
-            // Si l'index de la photo est strictement égale à "current" on applique la classe "active" sinon la classe "inactive"
+            /**
+             * Application de la classe si l'index correspond au current / la photo affichée
+             */
             className={index === current ? "slideshow__active-picture" : ""}
           >
-            {/* Contenu de la div : on mappe et affiche la photo dont l'index correspond à "current" */}
+            {/**
+             * Affichage de la photo si l'index correspond au current / la photo affichée 
+            */}
             {index === current && (
               <img
                 src={picture}
@@ -51,8 +52,10 @@ function Slideshow({ props }) {
           </div>
         );
       })}
-      {/* affichage du bouton s'il y a plus d'une photo.
-      La src ce sont les svg et au clique on appele les variables d'expression qui mettent à jour le state */}
+      {/**
+       * Vérification de la longueur, permet de na pas afficher les flèches si il n'y a qu'une photo
+       * Utilisation des fonctions prevSlide et nextSlide déclarées en amont sur le clique
+       */}
       {length > 1 ? (
         <>
           <div className="slideshow__previous" onClick={prevSlide}>

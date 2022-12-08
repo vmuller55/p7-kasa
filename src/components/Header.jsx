@@ -1,6 +1,8 @@
-import { Link, Outlet } from "react-router-dom";
+/**
+ * Importation de Link pour mettre en place les liens du Header
+ */
+import { Link } from "react-router-dom";
 import '../assets/styles/Header.css'
-
 import Logo from "./Logo";
 
 function Header() {
@@ -18,9 +20,6 @@ function Header() {
           A propos
         </Link>
       </nav>
-      {/* Un <Outlet> rend n'importe quelle route enfant actuellement active.
-      C'est comme un espace réservé pour les routes enfants définies ci-dessus. */}
-      <Outlet />
     </header>
   );
 }
