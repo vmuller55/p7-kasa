@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
  * Importation de react-rooter pour mettre en place le routing de l'application web
  */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css';
+import './assets/styles/index.css';
 import './assets/styles/normalize.css'
 /**
  * Importation des diférentes pages appelés avec les routes
