@@ -1,5 +1,5 @@
-import "../assets/styles/Footer.css";
-import Logo from "./Logo";
+import "./Footer.css";
+import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
 /**
  * Fonction utilsant Link sur le Logo pour retourner à la page d'acceuil 

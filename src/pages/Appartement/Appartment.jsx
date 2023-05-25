@@ -1,4 +1,4 @@
-import "../../assets/styles/Appartment.css";
+import "./Appartment.css";
 /**
  * Importation de useParams pour récuperer l'id de l'url 
  * Importation de useNavigate pour mettre en place une redirection en cas d'érreur sur l'Id
@@ -9,11 +9,11 @@ import data from "../../assets/data/data.json";
 /**
  * Importation des composants nécessaires
  */
-import Slideshow from "../../components/Slideshow";
-import ApartmentTag from "../../components/AppartmentTag";
-import Collapse from "../../components/Collapse";
-import Rate from "./../../components/Rate";
-import HostName from "./../../components/HostName";
+import Slideshow from "../../components/SlidesShow/Slideshow";
+import ApartmentTag from "../../components/AppartmentTag/AppartmentTag";
+import Collapse from "../../components/Collapse/Collapse";
+import Rate from "./../../components/Rate/Rate";
+import HostName from "./../../components/HostName/HostName";
 
 /**
  * Fonction qui va dans un premier temps vérifier si l'id de l'URL est correcte puius ensuite va générer le contenu HTML relatif aux appartements

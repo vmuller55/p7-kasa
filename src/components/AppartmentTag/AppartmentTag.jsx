@@ -1,4 +1,4 @@
-import "../assets/styles/AppartmentTag.css";
+import "./AppartmentTag.css";
 /**
  * 
  * @param {*} param0 Prends en props getTag de l'élément parent appartement

@@ -1,5 +1,5 @@
-import "../assets/styles/Collapse.css";
-import arrowdown from "../assets/images/dropdown-arrow-desktop.png";
+import "./Collapse.css";
+import arrowdown from "../../assets/images/dropdown-arrow-desktop.png";
 /**
  * Importation de useState
  */

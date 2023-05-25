@@ -1,4 +1,4 @@
-import "../assets/styles/AboutBanner.css";
+import "./AboutBanner.css";
 
 /**
  * Fonction qui met en place le code HTML correspondant à la Banner de la page About

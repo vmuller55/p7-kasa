@@ -10,12 +10,12 @@ import './assets/styles/normalize.css'
  * Importation des diférentes pages appelés avec les routes
  */
 import Home from './pages/Home/Home';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import About from './pages/About/About.jsx'
 import Error404 from './pages/Error404/Error404.jsx';
 import Appartment from './pages/Appartement/Appartment.jsx';
-import reportWebVitals from './reportWebVitals';
+
 
 /**
  * Implémentation des routes dans le fichier HTML 
@@ -38,8 +38,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,4 +1,4 @@
-import "../assets/styles/Banner.css";
+import "./Banner.css";
 
 /**
  * Fonction qui met en place le code HTML correspondant à la Banner

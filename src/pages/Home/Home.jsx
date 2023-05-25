@@ -1,10 +1,10 @@
-import "../../assets/styles/Home.css";
+import "./Home.css";
 import bannerImg from "../../assets/images/bannerImg.jpeg";
 /**
  * Importation des composants de la page Home
  */
-import Banner from "../../components/Banner";
-import AppartmentCard from "../../components/AppartmentCards";
+import Banner from "../../components/Banner/Banner";
+import AppartmentCard from "../../components/AppartmentCards/AppartmentCards";
 /**
  * Importation du fichier JSON contenant les informations des appartements
  */

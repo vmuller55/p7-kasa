@@ -1,4 +1,4 @@
-import "../assets/styles/AppartmentCards.css";
+import "./AppartmentCards.css";
 /*
 *Fonction prenant en props '...apartment' généré dans le composant parent Home
 *retourn les cards des appartements 

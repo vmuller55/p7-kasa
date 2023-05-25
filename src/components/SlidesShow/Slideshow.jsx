@@ -1,6 +1,6 @@
-import "../assets/styles/Slideshow.css";
-import arrowLeft from "../assets/images/arrowLeft.svg";
-import arrowRight from "../assets/images/arrowRight.svg";
+import "./Slideshow.css";
+import arrowLeft from "../../assets/images/arrowLeft.svg";
+import arrowRight from "../../assets/images/arrowRight.svg";
 import { useState } from "react";
 
 /**

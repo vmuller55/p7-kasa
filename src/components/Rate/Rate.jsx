@@ -1,6 +1,6 @@
-import redstar from "../assets/images/redStar.svg";
-import greystar from "../assets/images/greyStar.svg";
-import "../assets/styles/Rate.css";
+import redstar from "../../assets/images/redStar.svg";
+import greystar from "../../assets/images/greyStar.svg";
+import "./Rate.css";
 /**
  * 
  * @param {*} props  Fonction qui prends en prop props de l'élément parent Apartment

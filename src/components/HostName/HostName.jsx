@@ -1,4 +1,4 @@
-import "../assets/styles/HostName.css";
+import "./HostName.css";
 /**
  * 
  * @param {*} param0 Fonction qui prends en prop host de 'élement parent Apartment

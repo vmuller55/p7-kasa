@@ -2,8 +2,8 @@
  * Importation de Link pour mettre en place les liens du Header
  */
 import { Link } from "react-router-dom";
-import '../assets/styles/Header.css'
-import Logo from "./Logo";
+import './Header.css'
+import Logo from "../Logo/Logo";
 
 function Header() {
   return (
